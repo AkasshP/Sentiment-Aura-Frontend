@@ -1,0 +1,234 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-root {
+  min-height: 100vh;
+  color: #e5e7ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", sans-serif;
+}
+
+.app-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.app-header {
+  margin-bottom: 1.75rem;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  margin-top: 0.35rem;
+  max-width: 36rem;
+  color: #9ca3c7;
+  font-size: 0.9rem;
+}
+
+.app-error-banner {
+  margin-bottom: 1rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  color: #fecaca;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.app-error-banner button {
+  background: transparent;
+  border: none;
+  color: #fecaca;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+  gap: 1.75rem;
+}
+
+.card {
+  border-radius: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  background: radial-gradient(circle at top left, #020617, #020218);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow:
+    0 24px 45px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(24px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3c7;
+}
+
+.card-description {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ca3c7;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #22c55e, #14b8a6);
+  color: #0b1120;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow:
+    0 10px 30px rgba(34, 197, 94, 0.4),
+    0 0 0 1px rgba(22, 163, 74, 0.5);
+  transition:
+    transform 140ms ease-out,
+    box-shadow 140ms ease-out,
+    filter 140ms ease-out;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.primary-btn.btn-recording {
+  background: radial-gradient(circle at 20% 20%, #f97316, #ef4444);
+  box-shadow:
+    0 12px 32px rgba(248, 113, 113, 0.5),
+    0 0 0 1px rgba(239, 68, 68, 0.7);
+}
+
+.ghost-btn {
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.7);
+  color: #e5e7ff;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 0.1rem 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.status-idle {
+  background: rgba(15, 23, 42, 0.9);
+  color: #9ca3c7;
+}
+.status-connecting {
+  background: rgba(234, 179, 8, 0.18);
+  color: #facc15;
+}
+.status-connected {
+  background: rgba(22, 163, 74, 0.2);
+  color: #4ade80;
+}
+.status-error {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fecaca;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-right: 0.4rem;
+}
+
+.dot-pending {
+  background: #facc15;
+}
+.dot-ok {
+  background: #4ade80;
+}
+.dot-error {
+  background: #ef4444;
+}
+
+.live-row {
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.live-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: #9ca3c7;
+}
+
+.live-footer {
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
