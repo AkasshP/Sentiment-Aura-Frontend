@@ -1,19 +1,20 @@
 // src/components/SentimentGauge.tsx
-import React from "react";
-
 type Props = {
   sentiment: number | null;
+  isAnalyzing?: boolean; // <-- added
 };
 
 const clamp = (n: number, min: number, max: number) =>
   Math.min(max, Math.max(min, n));
 
-export default function SentimentGauge({ sentiment }: Props) {
+export default function SentimentGauge({ sentiment, isAnalyzing = false }: Props) {
   const sRaw = sentiment ?? 0.5;
   const s = clamp(sRaw, 0, 1);
 
   const label =
-    sentiment == null
+    isAnalyzing
+      ? "Analyzing…"
+      : sentiment == null
       ? "Waiting…"
       : s > 0.66
       ? "Positive"
