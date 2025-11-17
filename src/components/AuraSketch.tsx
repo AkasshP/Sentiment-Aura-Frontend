@@ -1,5 +1,5 @@
 // src/components/AuraSketch.tsx
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import Sketch from "react-p5";
 import type p5Types from "p5";
 

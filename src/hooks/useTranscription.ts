@@ -28,6 +28,8 @@ export function useTranscription(opts: UseTranscriptionOptions = {}) {
   const [status, setStatus] = useState<TranscriptionStatus>("idle");
   const [error, setError] = useState<string | null>(null);
 
+  const connected = status === "connected";
+
   const [finalTranscript, setFinalTranscript] = useState("");
   const [liveSegment, setLiveSegment] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
@@ -185,6 +187,7 @@ export function useTranscription(opts: UseTranscriptionOptions = {}) {
   return {
     recording,
     status,
+    connected,   
     error,
     transcript,
     messages,

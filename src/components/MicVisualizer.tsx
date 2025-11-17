@@ -1,5 +1,5 @@
 // src/components/MicVisualizer.tsx
-import React from "react";
+
 
 type Props = {
   recording: boolean;

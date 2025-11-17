@@ -1,5 +1,5 @@
 // src/components/DebugDrawer.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 
 type Props = {
   messages: string[];

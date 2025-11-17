@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import AuraSketch from "./components/AuraSketch";
 import SentimentGauge from "./components/SentimentGauge";

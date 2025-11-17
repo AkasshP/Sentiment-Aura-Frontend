@@ -1,5 +1,5 @@
 // src/components/KeywordChips.tsx
-import React from "react";
+
 
 type Props = {
   keywords: string[];
